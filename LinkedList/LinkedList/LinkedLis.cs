@@ -33,6 +33,70 @@ namespace LinkedList
             }
         }
 
+        public void Pat_Pos(Gtype Data, int Pos)
+        {
+            //creating a Temp variable
+            Node<Gtype> temp_node = head;
+            int size = Size();
+
+            if(Pos > size + 1  || Pos < 1)
+            {
+                Console.WriteLine("Invalid Position");
+                return;
+            }
+
+            //Creating new node
+            Node<Gtype> node = new Node<Gtype>(Data);
+
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+                if (Pos == 1)
+                {
+                    head = node;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Position");
+                }
+            }
+            else
+            {
+                int count = 1;
+                while (Pos > count + 1)
+                {
+                    temp_node = temp_node.next;
+                    count++;
+                }
+                Node<Gtype> temp_node2 = temp_node.next;
+                temp_node.next = node;
+                node.next = temp_node2;
+            }
+
+        }
+
+        public int Size()
+        {
+
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+                return 0;
+            }
+            else
+            {
+                int count = 1;
+                Node<Gtype> temp_node = head;
+                Console.WriteLine(temp_node.val);
+                while (temp_node.next != null)
+                {
+                    count++;
+                    temp_node = temp_node.next;
+                }
+                return count;
+            }
+        }
+
         public void Display()
         {
             if (head is null)
@@ -55,4 +119,6 @@ namespace LinkedList
 
         }
     }
+
+
 }
