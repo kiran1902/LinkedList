@@ -93,6 +93,36 @@ namespace LinkedList
            
         }
 
+        public void Pop_Last(int pos)
+        {
+
+            //variable
+            Node<Gtype> temp_node = head;
+            int size = Size();
+
+            if (pos > size + 1 || pos < 1)
+            {
+                Console.WriteLine("Invalid Position");
+                return;
+            }
+            if (pos == 1)
+            {
+                head = temp_node.next;
+
+            }
+            else
+            {
+                int count = 1;
+                while (pos > count + 1)
+                {
+                    temp_node = temp_node.next;
+                    count++;
+                }
+                Node<Gtype> temp_node2 = temp_node.next.next;
+                temp_node.next = temp_node2;
+            }
+        }
+
         public bool IsEmpty()
         {
             if (head is null) return true;
