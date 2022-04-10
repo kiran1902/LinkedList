@@ -4,7 +4,7 @@ Console.WriteLine("Welcome to LinkedList Program");
 
 
 /// <summary>
-/// UC8 - Adding an element(40 after 30) in linked list
+/// UC9 - Delete an element(40) in linked list
 /// </summary>
 
 LinkedLis<int> myList = new LinkedLis<int>();
