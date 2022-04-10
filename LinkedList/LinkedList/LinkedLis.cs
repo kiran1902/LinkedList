@@ -75,6 +75,30 @@ namespace LinkedList
 
         }
 
+        public void Pop()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("List is Empty");
+               
+            }
+            else if (head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                head = head.next;
+            }
+           
+        }
+
+        public bool IsEmpty()
+        {
+            if (head is null) return true;
+            else return false;
+        }
+
         public int Size()
         {
 
