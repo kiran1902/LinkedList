@@ -151,6 +151,22 @@ namespace LinkedList
             }
         }
 
+        public int Search(int value)
+        {
+            Node<Gtype> node = head;
+
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    Console.WriteLine("Node is Present");
+                    return value;
+                }
+                node = node.next;
+            }
+            return value;
+        }
+
         public void Display()
         {
             if (head is null)

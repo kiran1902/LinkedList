@@ -9,6 +9,7 @@ namespace LinkedList
     public class Node<Gtype>
     {
         public Gtype val;
+        public int data;
         public Node<Gtype> next;
 
         public Node(Gtype Data)
