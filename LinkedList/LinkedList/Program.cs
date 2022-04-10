@@ -8,7 +8,7 @@ Console.WriteLine("Welcome to LinkedList Program");
 /// /// </summary>
 
 LinkedLis<int> myList = new LinkedLis<int>();
-myList.Add(56);
-myList.Add(30);
 myList.Add(70);
+myList.Add(30);
+myList.Add(56);
 myList.Display();
