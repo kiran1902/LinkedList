@@ -17,3 +17,7 @@ myList.Display();
 myList.Pat_Pos(40, 3);
 Console.WriteLine("After adding");
 myList.Display();
+
+Console.WriteLine("After removing");
+myList.Pop_Last(3);
+myList.Display();
